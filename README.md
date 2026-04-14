@@ -1,36 +1,88 @@
+<div align="center">
+
 # Sahil.dev - Java Developer Portfolio
 
-A modern dark-shade React portfolio for a Java developer. The app presents
-Sahil's skills, projects, learning path, contact details, and a backend-ready
-login demo in a polished single-page experience.
+Dark, responsive, GitHub-ready portfolio app for a Java developer.
 
-## Preview
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=111)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=for-the-badge&logo=vite&logoColor=fff)](https://vite.dev/)
+[![Java](https://img.shields.io/badge/Java-Focused-ED8B00?style=for-the-badge&logo=openjdk&logoColor=fff)](https://www.java.com/)
+[![License](https://img.shields.io/badge/License-Personal-50D890?style=for-the-badge)](#)
 
-Run the app locally and open:
+</div>
 
-```text
-http://127.0.0.1:5173
-```
+## Overview
 
-## Features
+Sahil.dev is a polished single-page portfolio built with React and Vite. It is
+structured for clean GitHub presentation, fast local development, static hosting,
+and future backend expansion.
 
-- Dark responsive portfolio design
-- Home, About, Skills, Projects, Experience, Contact, and Login sections
-- Java-focused content and project cards
-- Cursor-follow glow interaction
-- Animated hero accents and hover effects
+The app includes a multi-section portfolio experience for Java skills, projects,
+experience, contact details, and a backend-ready login demo.
+
+## Highlights
+
+- Dark modern UI with responsive layouts
+- Cursor-follow glow behavior
+- Animated hero accents and hover interactions
+- Java-focused skills and project presentation
+- Component-based React file structure
+- Centralized portfolio data
 - Contact form UI
-- Backend-ready login page for future Java authentication
-- Vite build setup with GitHub Pages friendly asset paths
-- ESLint configuration for code quality
+- Login demo prepared for future Java authentication
+- GitHub Pages friendly Vite configuration
+- ESLint configured for clean code checks
 
 ## Tech Stack
 
-- React
-- Vite
-- JavaScript
-- CSS
-- ESLint
+| Area | Tools |
+| --- | --- |
+| Frontend | React, JavaScript, CSS |
+| Build Tool | Vite |
+| Code Quality | ESLint |
+| Hosting Ready | GitHub Pages, Netlify, Vercel, static hosting |
+
+## Screens / Sections
+
+| Section | Purpose |
+| --- | --- |
+| Home | Hero, intro, primary actions, quick stats |
+| About | Developer summary and working values |
+| Skills | Core Java, backend, frontend, and tools |
+| Projects | Project cards with stack tags |
+| Experience | Current learning path and goals |
+| Contact | Contact links and message form UI |
+| Login | Demo login flow for future backend integration |
+
+## Folder Structure
+
+```text
+.
+|-- index.html
+|-- package.json
+|-- package-lock.json
+|-- vite.config.js
+|-- eslint.config.js
+|-- README.md
+`-- src
+    |-- App.jsx
+    |-- main.jsx
+    |-- styles.css
+    |-- components
+    |   |-- CursorGlow.jsx
+    |   |-- Footer.jsx
+    |   `-- Header.jsx
+    |-- data
+    |   `-- portfolio.js
+    `-- pages
+        |-- About.jsx
+        |-- Contact.jsx
+        |-- Experience.jsx
+        |-- Home.jsx
+        |-- Login.jsx
+        |-- Projects.jsx
+        `-- Skills.jsx
+```
 
 ## Getting Started
 
@@ -46,68 +98,44 @@ Start the development server:
 npm run dev
 ```
 
+Open:
+
+```text
+http://127.0.0.1:5173
+```
+
 Start with LAN access:
 
 ```bash
 npm run dev -- --host 0.0.0.0
 ```
 
-Build for production:
+## Available Scripts
 
-```bash
-npm run build
-```
-
-Preview the production build:
-
-```bash
-npm run preview
-```
-
-Run lint:
-
-```bash
-npm run lint
-```
-
-## Project Structure
-
-```text
-.
-├── index.html
-├── package.json
-├── package-lock.json
-├── vite.config.js
-├── eslint.config.js
-├── README.md
-└── src
-    ├── App.jsx
-    ├── main.jsx
-    └── styles.css
-```
-
-## Pages
-
-- `Home` - Hero section, intro, stats, and primary actions
-- `About` - Developer summary and working values
-- `Skills` - Java, backend, frontend, and tooling skills
-- `Projects` - Portfolio project cards with stacks
-- `Experience` - Learning roadmap and development goals
-- `Contact` - Contact links and message form UI
-- `Login` - Demo login screen for future backend integration
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the Vite development server |
+| `npm run build` | Create a production build in `dist/` |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint checks |
 
 ## Deployment
 
-This project includes:
+This project is configured with a relative Vite base path:
 
 ```js
 base: "./"
 ```
 
-in `vite.config.js`, so the production build can work correctly on static
-hosting and GitHub Pages.
+That makes the build more reliable on GitHub Pages and other static hosts.
 
-Build output is generated in:
+Build the app:
+
+```bash
+npm run build
+```
+
+The production files will be generated in:
 
 ```text
 dist/
@@ -115,35 +143,43 @@ dist/
 
 ## Customize
 
-Update portfolio content in:
+Update portfolio content here:
 
 ```text
-src/App.jsx
+src/data/portfolio.js
 ```
 
-Update visual styling in:
+Update page markup here:
+
+```text
+src/pages/
+src/components/
+```
+
+Update styling here:
 
 ```text
 src/styles.css
 ```
 
-Before publishing, replace these placeholders:
+Before publishing publicly, replace:
 
 - `hello@example.com`
-- GitHub profile link
-- LinkedIn profile link
-- Resume link, if added
-- Project descriptions, if you want to use real deployed project URLs
+- GitHub profile URL
+- LinkedIn profile URL
+- Real project links
+- Resume link, if you add one
 
-## GitHub Push
+## Quality Checks
 
-Create an empty GitHub repository, then connect and push:
+The project has been verified with:
 
 ```bash
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
-git push -u origin main
+npm run lint
+npm run build
 ```
 
 ## Author
 
-Sahil.dev - Java Developer Portfolio
+**Sahil.dev**  
+Java Developer Portfolio
